@@ -11,7 +11,6 @@ public class Skeleton : Enemy
 
 	private Transform currentPatrolPoint;
 
-	private Transform cachePatrolPoint;
 	public override void UpdateStates()
 	{
 
@@ -48,7 +47,6 @@ public class Skeleton : Enemy
 
 		currentPatrolPoint = ReturnPatrolPoint();
 
-		cachePatrolPoint = currentPatrolPoint;
 
 		patrolCoroutine = PatrolCoroutine();
 
@@ -75,7 +73,7 @@ public class Skeleton : Enemy
 			StopCoroutine(patrolCoroutine);
 		}
 		currentPatrolPoint = null;
-		patrolCoroutine = null;
+		
 	}
 	public override void DoFollowPlayer()
 	{

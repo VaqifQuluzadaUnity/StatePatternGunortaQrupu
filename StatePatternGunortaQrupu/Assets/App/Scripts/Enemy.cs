@@ -79,7 +79,7 @@ public class Enemy : MonoBehaviour
 
 	public virtual void DoPatrol()
 	{
-		Debug.Log(gameObject.name + "patrolling");
+		
 	}
 
 	public virtual void StopPatrol()
